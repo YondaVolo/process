@@ -1,0 +1,21 @@
+// Import gridle :
+@import 'gridle/gridle';
+
+
+// Configure :
+$gridle-columns-count : 12;
+$gridle-gutter-width : 10px;
+$gridle-debug : true;
+$gridle-html-states-classes : true; // not really for production, used for demo here...
+
+@include gridle_register_default_states();
+@include gridle_register_state('ipad-landscape', 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)');
+
+/**
+* Custom States :
+*/
+@include gridle_register_state ( "mls" , 480px , 600px ); // mobile landscape
+
+@include gridle_register_state ( "st" , 600px , 768px ); // small tablet
+
+@include gridle_register_state ( "tls" , 768px , 1024px ); // for small and normal tablets

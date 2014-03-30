@@ -1,0 +1,27 @@
+/**
+ * Imports :
+ */
+@import 'compass/reset';
+@import 'compass/css3/box';
+
+/**
+ * Import grid settings :
+ * This to be able to use gridle mixins, etc...
+ */
+@import 'grid-settings';
+
+
+/**
+ * Basic formatting :
+ */
+body {
+	font:11px/1.5 'Helvetica Neue', Verdana, sans-serif;
+	background-color: #FFF000;
+
+	@include gridle_state('mobile') {
+		text-align:center;
+	}
+	@include gridle_state('ipad-landscape') {
+		font-size:16px;
+	}
+}
